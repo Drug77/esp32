@@ -1,0 +1,23 @@
+menu "Traffic Light Example Configuration"
+
+config BUTTON_PIN
+    int "Number of the PIN connected to the BUTTON"
+	range 0 34
+	default 26
+
+config RED_LED_PIN
+    int "Number of the RED LED PIN"
+	range 0 34
+	default 27
+
+config YELLOW_LED_PIN
+    int "Number of the YELLOW LED PIN"
+	range 0 34
+	default 14
+
+config GREEN_LED_PIN
+    int "Number of the GREEN LED PIN"
+	range 0 34
+	default 12
+
+endmenu
