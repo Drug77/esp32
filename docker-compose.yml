@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  node:
+    build:
+      context: ./docker/node
+    container_name: esp32-node
+    volumes:
+      - .:/esp32
+    ports:
+      - '8090:8080'
+
+  esp-idf:
+    build:
+      context: ./docker/esp-idf
+    container_name: esp32-esp-idf
+    volumes:
+      - .:/esp32
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
